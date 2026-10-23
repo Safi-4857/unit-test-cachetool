@@ -1,0 +1,6 @@
+hits_a,hits_b,expected_evicted
+3,0,b
+0,3,a
+2,1,b
+1,2,a
+5,1,b

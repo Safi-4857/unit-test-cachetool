@@ -282,7 +282,9 @@ class TestLFUCacheModule:
 
     def test_contains_does_not_count_as_use(self):
         c = make(2, a=1, b=2)
-        assert "a" in c
+        _ = c["b"]
+        for _ in range(3):
+            assert "a" in c
         c["c"] = 3
         assert list(c) == ["b", "c"]
 
